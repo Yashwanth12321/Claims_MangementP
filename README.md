@@ -11,7 +11,6 @@ A web application designed to simplify the claims process between patients and i
 - Authentication system for patients and insurers
 - Status tracking (Pending, Approved, Rejected)
 - File upload for claim documents
-- Dynamic dashboard with filters for claims
 
 
 ## Environment Variables
@@ -81,68 +80,41 @@ PORT - 5000
 - Deletes all claims associated with the authenticated patient.
 
 
-
-
-
-
-## Lessons Learned
-
-Gained hands-on experience building a full-stack web application.
-
-Implemented authentication and authorization.
-
-Learned how to handle file uploads with Node.js.
-
-Faced challenges handling complex claim workflows but solved them with structured API endpoints and clear data models.
-
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
-Additional user roles with varying permissions
-
-Add notifications for claim status updates
-
-Improve UI with better responsiveness
-
-
 ## Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Yashwanth12321/claims-management-platform.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd claims-management-platform
 ```
 
-Install dependencies
+run frontend 
 
 ```bash
+  cd client
   npm install
+  npm run dev
 ```
 
-Start the server
+run backend
 
 ```bash
-  npm run start
+  cd server
+  npm install
+  npm start
 ```
+
 
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
+**Client:** React, TailwindCSS , accentricityUI, ShadCN
 
-**Server:** Node, Express
-
-
-## Appendix
-
-Any additional information goes here
-
+**Server:** Node, Express, Mongoose
+**database:** MongoDB
