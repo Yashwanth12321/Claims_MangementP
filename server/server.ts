@@ -2,12 +2,12 @@ import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db';
 import cors from 'cors';
-
-
-dotenv.config();
-connectDB();
 import claims from './Routes/Claims';
 import auth from './Routes/Auth';
+connectDB();
+
+dotenv.config();
+
 
 const app = express();
 app.use(cors());
