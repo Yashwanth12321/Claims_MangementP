@@ -16,5 +16,5 @@ app.use('/uploads', express.static('uploads'));
 app.use('/claims', claims);
 app.use('/auth', auth);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
