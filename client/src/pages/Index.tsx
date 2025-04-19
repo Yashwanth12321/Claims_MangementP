@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/layout/Header';
-import { CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
   return (

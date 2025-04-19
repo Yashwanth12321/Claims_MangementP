@@ -33,7 +33,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const login = async (email: string, password: string) => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/auth/login', {
+      const response = await fetch('http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

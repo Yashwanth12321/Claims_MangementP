@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 import { motion } from "motion/react";
-import { IconUpload } from "@tabler/icons-react";
 import { useDropzone } from "react-dropzone";
 
 const mainVariant = {
@@ -27,8 +26,10 @@ const secondaryVariant = {
 
 export const FileUpload = ({
   onChange,
+  accept,
 }: {
   onChange?: (files: File[]) => void;
+  accept?: string;
 }) => {
   const [files, setFiles] = useState<File[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -49,7 +50,7 @@ export const FileUpload = ({
     noClick: true,
     onDrop: handleFileChange,
     onDropRejected: (error) => {
-      console.log(error);
+        console.log(error);
     },
   });
 
@@ -64,6 +65,7 @@ export const FileUpload = ({
           ref={fileInputRef}
           id="file-upload-handle"
           type="file"
+          accept={accept}
           onChange={(e) => handleFileChange(Array.from(e.target.files || []))}
           className="hidden"
         />

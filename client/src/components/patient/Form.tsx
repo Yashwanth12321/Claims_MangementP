@@ -10,6 +10,8 @@ import { useAuth } from '@/context/AuthContext';
 import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 
+
+
 export const ClaimForm = () => {
   const { user } = useAuth();
   const [description, setDescription] = useState('');
@@ -72,8 +74,8 @@ export const ClaimForm = () => {
         setLoading(false);
         return;
       }
-      
-      const response = await fetch('http://localhost:5000/claims', {
+
+      const response = await fetch('http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -153,7 +155,6 @@ export const ClaimForm = () => {
                 }
               }}
               accept="image/*,application/pdf"
-              maxSize={5 * 1024 * 1024} // 5MB
             />
             {document && (
               <Button 

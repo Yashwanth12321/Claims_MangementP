@@ -23,7 +23,7 @@ export const ClaimsDashboard = ({ onViewClaim }: ClaimsDashboardProps) => {
     const fetchClaims = async () => {
       try {
         // const data = await api.getClaims();
-        const response =await fetch("http://localhost:5000/claims/all",{
+        const response =await fetch("http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims/all",{
           method:'GET',
           headers:{
             'Content-Type': 'application/json',

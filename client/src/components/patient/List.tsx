@@ -19,7 +19,7 @@ export const ClaimList = () => {
 
     const fetchClaims = async () => {
       try {
-        const response = await fetch('http://localhost:5000/claims',{
+        const response = await fetch('http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims',{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

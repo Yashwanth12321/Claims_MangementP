@@ -13,9 +13,14 @@ export const LoginForm = () => {
   const [password, setPassword] = useState('');
   const { login, loading } = useAuth();
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     await login(email, password);
+    const length= await fetch("http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims/allclaimsnumber");
+    const lengthData = await length.json();
+    console.log(lengthData);
+    
     toast(
       "Login successful"+"Welcome back, " + email + ".",
     );

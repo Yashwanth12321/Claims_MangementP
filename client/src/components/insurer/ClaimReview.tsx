@@ -17,7 +17,7 @@ interface ClaimReviewProps {
   onBack: () => void;
   onClaimUpdated: () => void;
 }
-const BASE_URL = 'http://localhost:5000';  
+const BASE_URL = 'http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001';  
 
 export const ClaimReview = ({ claimId, onBack, onClaimUpdated }: ClaimReviewProps) => {
   const [claim, setClaim] = useState<Claim | null>(null);
@@ -32,7 +32,7 @@ export const ClaimReview = ({ claimId, onBack, onClaimUpdated }: ClaimReviewProp
     const fetchClaim = async () => {
       try {
         console.log('Fetching claim:', claimId);
-        const response = await fetch(`http://localhost:5000/claims/${claimId}`,{
+        const response = await fetch(`http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims/${claimId}`,{
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export const ClaimReview = ({ claimId, onBack, onClaimUpdated }: ClaimReviewProp
 
     setUpdating(true);
     try {
-      await  fetch(`http://localhost:5000/claims/${claim._id}`, {
+      await  fetch(`http://ec2-15-206-93-14.ap-south-1.compute.amazonaws.com:5001/claims/${claim._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
