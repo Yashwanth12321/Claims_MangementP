@@ -1,4 +1,3 @@
-
 #  Claims Management Platform
 
 A web application designed to simplify the claims process between patients and insurers. Patients can submit and track claims, while insurers can review, manage, and update claim statuses.
